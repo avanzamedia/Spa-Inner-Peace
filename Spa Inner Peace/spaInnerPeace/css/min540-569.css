@@ -1,0 +1,160 @@
+/*
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements.  See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership.  The ASF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License.  You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+}
+
+.ajuste-menu {
+font-size: 2em;
+padding: 10%;
+text-align: center;
+}
+#ajuste {
+    margin-top: 0%;
+}
+.iframesIn {
+width: 76%;
+color: #fff;
+margin-left: 12%;
+}
+
+body {
+    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+    -webkit-user-select: auto !important;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+    background-color:#FFFFFF;
+    background-image:linear-gradient(top, #FFFFFF 0%, #FFFFFF 51%);
+    background-image:-webkit-linear-gradient(top, #FFFFFF 0%, #FFFFFF 51%);
+    background-image:-ms-linear-gradient(top, #FFFFFF 0%, #FFFFFF 51%);
+    background-image:-webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        color-stop(0, #FFFFFF),
+        color-stop(0.51, #FFFFFF)
+    );
+    background-attachment:fixed;
+    font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+    font-size:12px;
+    height:100%;
+    margin:0px;
+    padding:0px;
+    
+    width:100%;
+}
+
+.app {
+text-align: center;
+background-color: #32005F;
+width: 100%;
+position: fixed;
+top: 10%;
+}
+.app img {
+width: 30%;
+min-width: 130px;
+}
+.loader {
+text-align: center;
+position: fixed;
+bottom: 10%;
+width: 100%;
+}
+.loader img {
+width: 39%;
+max-width: 91px;
+}
+.campos {
+width: 80%;
+padding: 2%;
+border: none;
+margin: 3%;
+font-size: 1.5em;
+}
+.textos1 {
+font-size: 1.5em;
+margin: 5px;
+}
+.boton {
+font-size: 1.5em;
+margin: 3%;
+width: 85%;
+background-image:url(../img/btnBack.png);
+color: #fff;
+padding: 2%;
+border: none;
+background-size: 100% 100%;
+}
+.cont-forms a {
+    text-decoration: none;
+}
+.cont-forms p{
+    color: #66006F;
+    text-decoration:none;
+}
+.cont-forms {
+margin-left: 10%;
+text-align: center;
+width: 80%;
+background-color: rgb(243, 146, 0);
+padding: 4% 1% 5% 1%;
+}
+#conf {
+    border-left: solid #fff 3px;
+}
+.tab1{
+width: 100%;
+padding-top: 100%;
+color: red;
+background-color:rgb(77, 0, 121);
+float: none;
+border-left: 0px;
+border-right: solid #fff 3px;
+/*border-bottom: solid #fff 3px;*/
+max-width: 100%;
+background-size:cover;
+}
+.tab1 img {
+width:100%;
+}
+.tab2{
+width: 100%;
+padding-top: 100%;
+color: red;
+background-color:rgb(61, 0, 102);
+/* float: left; */
+border-left: solid #fff 3px;
+border-top: solid #fff 3px;
+background-size:cover;
+}
+.menu1 {
+    width: 12%;
+    position:fixed;
+}
+.menu2 {
+position: fixed;
+width: 12%;
+right: 0px;
+}
+.iframes {
+width: 100%;
+width: 80%;
+/*height: 350px;
+margin-left: 12%;*/
+}

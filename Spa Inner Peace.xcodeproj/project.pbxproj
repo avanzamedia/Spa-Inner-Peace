@@ -13,6 +13,9 @@
 		0F5E14501B1664A70060D135 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F5E144F1B1664A70060D135 /* Images.xcassets */; };
 		0F5E14531B1664A70060D135 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F5E14511B1664A70060D135 /* LaunchScreen.xib */; };
 		0F5E145F1B1664A70060D135 /* Spa_Inner_PeaceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5E145E1B1664A70060D135 /* Spa_Inner_PeaceTests.swift */; };
+		0F79BD8D1B1677DE00CE9D66 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F79BD8C1B1677DE00CE9D66 /* logo.png */; };
+		0F8EF7221B1699CC00F412E2 /* webViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F8EF7211B1699CC00F412E2 /* webViewController.m */; };
+		0FF3D7601B1804C100DDC702 /* spaInnerPeace in Resources */ = {isa = PBXBuildFile; fileRef = 0FF3D75F1B1804C100DDC702 /* spaInnerPeace */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,11 @@
 		0F5E14581B1664A70060D135 /* Spa Inner PeaceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Spa Inner PeaceTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F5E145D1B1664A70060D135 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0F5E145E1B1664A70060D135 /* Spa_Inner_PeaceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spa_Inner_PeaceTests.swift; sourceTree = "<group>"; };
+		0F79BD8C1B1677DE00CE9D66 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		0F8EF7201B1699CC00F412E2 /* webViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = webViewController.h; sourceTree = "<group>"; };
+		0F8EF7211B1699CC00F412E2 /* webViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = webViewController.m; sourceTree = "<group>"; };
+		0F8EF7231B16A1A000F412E2 /* Spa Inner Peace-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Spa Inner Peace-Bridging-Header.h"; sourceTree = "<group>"; };
+		0FF3D75F1B1804C100DDC702 /* spaInnerPeace */ = {isa = PBXFileReference; lastKnownFileType = folder; path = spaInnerPeace; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +67,7 @@
 		0F5E143A1B1664A70060D135 = {
 			isa = PBXGroup;
 			children = (
+				0F79BD8C1B1677DE00CE9D66 /* logo.png */,
 				0F5E14451B1664A70060D135 /* Spa Inner Peace */,
 				0F5E145B1B1664A70060D135 /* Spa Inner PeaceTests */,
 				0F5E14441B1664A70060D135 /* Products */,
@@ -77,12 +86,15 @@
 		0F5E14451B1664A70060D135 /* Spa Inner Peace */ = {
 			isa = PBXGroup;
 			children = (
+				0F8EF7231B16A1A000F412E2 /* Spa Inner Peace-Bridging-Header.h */,
 				0F5E14481B1664A70060D135 /* AppDelegate.swift */,
 				0F5E144A1B1664A70060D135 /* ViewController.swift */,
 				0F5E144C1B1664A70060D135 /* Main.storyboard */,
 				0F5E144F1B1664A70060D135 /* Images.xcassets */,
 				0F5E14511B1664A70060D135 /* LaunchScreen.xib */,
 				0F5E14461B1664A70060D135 /* Supporting Files */,
+				0F8EF7201B1699CC00F412E2 /* webViewController.h */,
+				0F8EF7211B1699CC00F412E2 /* webViewController.m */,
 			);
 			path = "Spa Inner Peace";
 			sourceTree = "<group>";
@@ -90,6 +102,7 @@
 		0F5E14461B1664A70060D135 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				0FF3D75F1B1804C100DDC702 /* spaInnerPeace */,
 				0F5E14471B1664A70060D135 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -192,7 +205,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F79BD8D1B1677DE00CE9D66 /* logo.png in Resources */,
 				0F5E144E1B1664A70060D135 /* Main.storyboard in Resources */,
+				0FF3D7601B1804C100DDC702 /* spaInnerPeace in Resources */,
 				0F5E14531B1664A70060D135 /* LaunchScreen.xib in Resources */,
 				0F5E14501B1664A70060D135 /* Images.xcassets in Resources */,
 			);
@@ -212,6 +227,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F8EF7221B1699CC00F412E2 /* webViewController.m in Sources */,
 				0F5E144B1B1664A70060D135 /* ViewController.swift in Sources */,
 				0F5E14491B1664A70060D135 /* AppDelegate.swift in Sources */,
 			);
@@ -342,9 +358,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "Spa Inner Peace/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Spa Inner Peace/Spa Inner Peace-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -352,9 +373,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "Spa Inner Peace/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Spa Inner Peace/Spa Inner Peace-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -411,6 +436,7 @@
 				0F5E14641B1664A70060D135 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0F5E14651B1664A70060D135 /* Build configuration list for PBXNativeTarget "Spa Inner PeaceTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +445,7 @@
 				0F5E14671B1664A70060D135 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

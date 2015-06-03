@@ -1,0 +1,132 @@
+﻿<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link href='http://fonts.googleapis.com/css?family=Titillium+Web' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+         
+         
+        <link rel="stylesheet" href="http://code.jquery.com/jquery-1.11.1.min.js"/>
+        <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css"/>
+      <title>Iniciar Sesion</title>
+        <style>
+            .app{ 
+            position: relative;
+            margin-top: 30%;
+            }
+            .app img {
+            width: 30%;
+            min-width: 130px;
+            }
+            .app {
+            color:#fff;
+            }
+            .loader {
+                position: fixed;
+                width: 100%;
+                height: 100%;
+                background-color: #33035E;
+                bottom: 0px;
+                opacity: 0.8;
+                display:none;
+            }
+                .loader img {
+                    width: 39%;
+                    max-width: 200px;
+                    margin-top: 20%;
+                }
+        </style>
+    </head>
+    <body class="cuerpo" style="font-family:'Titillium Web';background-color: #33035E;">
+        <div style="text-align:center;">  
+            <div class="app">
+                <img  src="img/Logonuevo.png" />
+                <p class="textos1">Body·Mind·Spirit</p>
+            </div>
+            <div class="cont-forms">
+                <input class="campos" type="text" value="" id="nombre" placeholder="Usuario*" />
+                <input class="campos" type="password" value="" id="password" placeholder="Contraseña*" />
+                <input class="boton" type="button" value="Ingresar" onClick="validar()" />
+                <a href="registro.html"><p class="textos1">Registrarse</p></a>
+                <a href="recuperarPasword.html"><p class="textos1">Recuperar contraseña</p></a>
+            </div>
+        </div>
+        <div id="loader" class="loader">
+            <img src="img/image_760978.gif" />
+        </div>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript">
+            app.initialize();
+        </script>
+
+        
+        <script  src="http://code.jquery.com/jquery-1.10.2.js"></script>
+        <script  src="http://code.jquery.com/ui/1.11.1/jquery-ui.js"></script> 
+       <script type="text/javascript">
+           function ir() { window.location = "main.html" }
+           function validar() {
+               if (mensaje() == 1) {
+                   $.ajax({
+                       url: 'http://avanzamedia.net/innerAcces.php',
+                       type: 'post',
+                       data: "email=" + document.getElementById('nombre').value +
+                             "&pass=" + document.getElementById('password').value + "&accion=login",
+                       success: function (output) {
+                           var resultado = output;
+                           resultado.toString();
+                           if (resultado.indexOf("success") > -1) {
+                               setTimeout('ir()', 2000);
+                           } else {
+                               navigator.notification.alert("Usuario no encontrado", "", "Notificatión");
+                           }
+                       }, error: function () {
+                           if (navigator.network.connection.type == Connection.NONE) {
+                               navigator.notification.alert('Revise su conección a internet', '', 'Atención');
+
+                           } else {
+                               return 1;
+                           }
+                       }
+                   });
+               }
+           }
+           function mensaje() {
+
+               if (nombre.value == "") {
+                   navigator.notification.alert("Ingrese su usuario", "", "Notificatión");
+               }
+               else if (password.value == "") {
+                   navigator.notification.alert("Ingrese su Contraseña", "", "Notificación");
+               } else 
+                   if (navigator.network.connection.type == Connection.NONE) {
+                       navigator.notification.alert('Revise su conección a internet', '', 'Atención');
+
+                   } else {
+                       return 1;
+                   }
+               }
+           
+        </script> 
+    </body>
+</html>

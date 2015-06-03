@@ -1,0 +1,287 @@
+/*
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements.  See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership.  The ASF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License.  You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+    background-color: #33035E;
+}
+
+.ajuste-menu {
+font-size: 2em;
+padding: 5%;
+text-align: center;
+}
+#ajuste {
+    margin-top: 20%;
+}
+.iframesIn {
+width: 100%;
+color: #fff;
+}
+
+
+
+body {
+    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+    -webkit-user-select: auto !important;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+    /*background-color:#FFFFFF;*/
+    background-image:linear-gradient(top, #33035E 0%, #33035E 51%);
+    background-image:-webkit-linear-gradient(top, #33035E 0%, #33035E 51%);
+    background-image:-ms-linear-gradient(top, #33035E 0%, #33035E 51%);
+    background-image:-webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        color-stop(0, #33035E),
+        color-stop(0.51, #33035E)
+    );
+    background-attachment:fixed;
+    font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+    font-size:12px;
+    height:100%;
+    margin:0px;
+    padding:0px;
+    background-color: #33035E;
+    width:100%;
+}
+
+.app {
+text-align: center;
+background-color: #33035E;
+width: 100%;
+position: fixed;
+top: 10%;
+}
+.app img {
+width: 30%;
+min-width: 150px;
+max-width: 300px;
+
+}
+/*.loader {
+text-align: center;
+position: fixed;
+bottom: 10%;
+width: 100%;
+background-color: #33035E;
+}
+
+.loader img {
+width: 20%;
+max-width: 200px;
+max-width: 170px;
+}*/
+.loader {
+text-align: center;
+position: fixed;
+bottom: 36%;
+width: 100%;
+background-color: #33035E;
+}
+
+.loader img {
+width: 26%;
+max-width: 200px;
+max-width: 170px;
+}
+.sloganAM {
+text-align: center;
+position: fixed;
+bottom: 7%;
+width: 100%;
+}
+
+.sloganAM img {
+width: 100%;
+max-width: 70%;
+}
+.campos {
+width: 80%;
+padding: 2%;
+border: none;
+margin: 3%;
+font-size: 1.5em;
+background-color: white;
+}
+.textos1 {
+font-size: 1.5em;
+margin: 5px;
+}
+.boton {
+font-size: 1.6em;
+margin: 3%;
+width: 85%;
+background-image:url(../img/btnBack.png);
+color: #fff;
+padding: 2%;
+border: none;
+background-size: 100% 100%;
+}
+.cont-forms a {
+    /*text-decoration: none;*/
+}
+.cont-forms p{
+    color: #66006F;
+    text-decoration:none;
+    background-color: rgb(246,146,0);
+}
+.cont-forms {
+margin-left: auto;
+margin-right: auto;
+text-align: center;
+width: 80%;
+background-color: rgb(243, 146, 0);
+padding: 4% 1% 5% 1%;
+}
+#inicio {
+border-left:0px;}
+#insta {}
+#conf {
+border-left:0px;}
+.tab1 {
+width: 19.5%;
+padding-top: 20%;
+color: red;
+background-color: rgb(77, 0, 121);
+float: left;
+border-left: solid #fff 0.15rem;
+/*border-bottom: solid #fff 0.17rem;*/
+background-size: cover;
+}
+.tab1 img {
+width:100%;
+}
+.tab2 {
+width: 19.6%;
+padding-top: 19%;
+color: red;
+background-color: rgb(77, 0, 121);
+float: left;
+border-left: solid #fff 0.17rem;
+border-top: solid #fff 0.17rem;
+border-bottom: solid #fff 0.17rem;
+background-size: cover;
+}
+/*.menu1 {
+  z-index: 999;
+  background-color: white;
+}*/
+.menu1 {
+position: fixed;
+width: 100%;
+z-index: 999;
+top: 0px;
+border-bottom: solid #fff 0.17rem;
+}
+.menu2 {
+position: relative;
+width: 100%;
+bottom: 0px;
+height:auto;
+/*height: 65px;*/
+background-color: #33035E;
+}
+.menu2_mio {
+    position:fixed;
+    width:100%;
+    bottom:0;
+    left:0;
+    background-color: #33035E;
+}
+.iframes {
+width: 100%;
+height: 80% !important;
+position: relative;
+overflow: hidden;
+}
+#su_slider_546ccc0ab9625 {
+    width: 100%;
+    cursor: -webkit-grab;
+    height: 280%;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+.iframeElement {
+width: 100%;
+height: 100%;
+border: none;
+}
+.page__status-bar-fill ~ .page__content {
+padding-top: 0px !important;
+}
+#content {
+margin-bottom: 0px !important;
+}
+#insta {
+border-right: solid #fff 2px;
+}
+#ifrmgeo {
+    width: 100%;
+}
+/****prueba iframe*****/
+#wpsl-radius, #wpsl-results {
+width: 100% !important;
+}
+.contenedor {
+width:100%;
+height:100%;
+}
+.redes {
+align-items: center;
+text-align: center;
+width: 80%;
+margin-left: 10%;
+}
+.fb {
+background-image: url('imgs/facebook.jpg');
+/* display: block; */
+height: 200px;
+background-repeat: no-repeat;
+margin-top: 272px;
+width: 100%;
+background-size: 100%;
+}
+.tw {
+background-image: url('imgs/twitter.jpg');
+/* display: block; */
+height: 200px;
+background-repeat: no-repeat;
+margin-top: 0;
+width: 100%;
+background-size: 100%;
+}
+.insta {
+background-image: url('imgs/instagram.jpg');
+/* display: block; */
+height: 200px;
+background-repeat: no-repeat;
+margin-top: 0;
+width: 100%;
+background-size: 100%;
+}
+.pinte {
+background-image: url('imgs/pinterest.jpg');
+/* display: block; */
+height: 200px;
+background-repeat: no-repeat;
+margin-top: 0;
+width: 100%;
+background-size: 100%;
+}

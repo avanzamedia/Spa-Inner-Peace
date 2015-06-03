@@ -1,0 +1,201 @@
+﻿<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8"> 
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="mobile-web-app-capable" content="yes">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE-Edge" />
+            
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link href='http://fonts.googleapis.com/css?family=Titillium+Web' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+         <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css"/>
+        <script  src="http://code.jquery.com/jquery-1.10.2.js"></script>
+      <script  src="http://code.jquery.com/ui/1.11.1/jquery-ui.js"></script> 
+
+     
+
+
+        <script type="text/javascript">      
+            var valid;
+            function ir() { window.location = "index.html" }
+            function validar() {
+                if (mensaje() == 1) {                   
+                        $.ajax({
+                            url: 'http://innerpeace.sv/innerAcces.php',
+                            type: 'post',
+                            data: "nombre=" + document.getElementById('nombre').value +
+                                  "&apellido=" + document.getElementById('apellido').value +
+                                  "&celular=" + document.getElementById('celular').value +
+                                  "&email=" + document.getElementById('email').value +
+                                  "&pass=" + document.getElementById('pass').value + "&accion=registro",
+                            success: function (output) {
+                                
+                                var resultado = output;
+                                resultado.toString();
+                                if (resultado.indexOf("success") > -1) {
+                                    navigator.notification.alert("Usuario registrado exitosamente", "", "Notificación");
+                                    setTimeout('ir()', 2000);
+                                } else {
+                                    navigator.notification.alert("Error en el registro, por favor intentelo de nuevo", "", "Notificación");
+                                }
+
+                            }, error: function () {
+                                navigator.notification.alert("Error de conexion", "", "Notificación");
+                            }
+                        });
+                    }                    
+                }
+            
+            
+            function validarcorreo() {
+                $.ajax({
+                    url: 'http://avanzamedia.net/innerAcces.php',
+                    type: 'post',
+                    data: "email=" + document.getElementById('email').value + "&accion=existe",
+                    success: function (output) {
+                        var resultado = output;
+                        resultado.toString();
+                        if (resultado.indexOf("fail") > -1)
+                        {
+                            navigator.notification.alert("Este correo electronico ya ha sido utilizado", "", "Notificación");
+                        }
+                        else
+                        {                            
+                            document.getElementById('ok').value = "ok";
+                        }
+                    }, error: function () {
+                        
+                    }
+                });
+            }
+            function mensaje() {
+                validarcorreo();
+                if (nombre.value == "")
+                {
+                    navigator.notification.alert("Ingrese su nombre", "", "Notificación");
+                }
+                else if (apellido.value == "")
+                {
+                    navigator.notification.alert("Ingrese su apellido", "", "Notificación");
+                }
+                else if (celular.value == "")
+                {
+                    navigator.notification.alert("Ingrese su numero de celular", "", "Notificación");
+                }
+                else if (email.value == "")
+                {
+                    navigator.notification.alert("Ingrese su correo", "", "Notificación");
+                }               
+                
+                else if (pass.value == "")
+                {
+                    navigator.notification.alert("Ingrese su contraseña", "", "Notificación");
+                }
+                else
+                if (document.getElementById('email').value == "Email ya utilizado")
+                {
+                    
+                }
+                else
+                if (document.getElementById('ok').value == "ok")
+                {
+                    return 1;
+                }               
+            }
+        </script>
+        <title></title>
+
+        
+
+        <style>
+            .app{
+            position: relative;
+            margin-top: 10%;
+            }
+            .app img {
+            width: 30%;
+            min-width: 130px;
+            }
+            .app {
+            color:#fff;
+            }
+            .loader {
+                position: fixed;
+                width: 100%;
+                height: 100%;
+                background-color: #33035E;
+                bottom: 0px;
+                opacity: 0.8;
+                display:none;
+            }
+                .loader img {
+                    width: 39%;
+                    max-width: 200px;
+                    margin-top: 20%;
+                }
+            .textos1 {
+                font-size: 1.4em;
+                margin: 5px;
+                color: #fff;
+            }
+            #stVolver {
+                margin-right: 10%;
+                margin-top: 5%;
+                font-size: 1.6em;
+            }
+            
+            
+        </style>
+    </head>
+    <body class="cuerpo" style="font-family:'Titillium Web';">
+        <div style="text-align:center;">  
+            <div class="app">
+                <img  src="img/Logonuevo.png" />
+                <p class="textos1">Crear Cuenta</p>
+            </div>
+            <div class="cont-forms">
+                <input class="campos" type="text" value="" id="nombre" placeholder="Nombre*" />
+                <input class="campos" type="text" value="" id="apellido" placeholder="Apellido*" />
+                <input class="campos" type="text" value="" id="celular" placeholder="Telefono*" />
+                <input class="campos" type="text" value="" id="email" placeholder="E-mail*" />
+                <input class="campos" type="password" value="" id="pass" placeholder="Contraseña*" />
+                <input class="campos" type="password" value="" id="confirmacion" placeholder="Confirmar contraseña*" />
+                <input class="boton" type="button" value="Registrar" onClick="validar()" />
+            </div>
+            <a href="login.html"><p class="textos1" id="stVolver" style="float: right;" >← Volver</p></a>
+        </div>
+        <div id="loader" class="loader">
+            <img src="img/image_760978.gif" />
+        </div>
+        <label id="ok" style="display:none;"></label>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript">
+            app.initialize();
+        </script>
+    </body>
+</html>

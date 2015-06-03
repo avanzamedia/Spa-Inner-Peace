@@ -1,0 +1,36 @@
+{
+  "ProjectName": "spa_Inner_Peace",
+  "ProjectGuid": "0c7d8ee6-8739-48ec-9f5b-584adc884364",
+  "projectVersion": 1,
+  "AppIdentifier": "com.telerik.spaInnerPeace",
+  "DisplayName": "Inner Peace",
+  "Author": "Avanza Media",
+  "Description": "",
+  "BundleVersion": "1.0",
+  "AndroidVersionCode": "1",
+  "iOSDeviceFamily": [
+    "1",
+    "2"
+  ],
+  "iOSBackgroundMode": [],
+  "ProjectTypeGuids": "{070BCB52-5A75-4F8C-A973-144AF0EAFCC9}",
+  "FrameworkVersion": "3.5.0",
+  "AndroidPermissions": [],
+  "DeviceOrientations": [
+    "Portrait"
+  ],
+  "AndroidHardwareAcceleration": "false",
+  "iOSStatusBarStyle": "Default",
+  "Framework": "Cordova",
+  "WP8TileTitle": "",
+  "WP8Publisher": "",
+  "WP8Capabilities": [],
+  "WP8Requirements": [],
+  "WP8PublisherID": "{a83bb3fb-720b-41d1-8b79-d94d1fb81af9}",
+  "WP8ProductID": "{83e3e5d1-76b4-4805-98b0-9b33ad707ec2}",
+  "WP8SupportedResolutions": [
+    "ID_RESOLUTION_WVGA",
+    "ID_RESOLUTION_WXGA",
+    "ID_RESOLUTION_HD720P"
+  ]
+}

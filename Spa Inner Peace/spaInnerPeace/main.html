@@ -1,0 +1,72 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="ie6 oldie"> <![endif]-->
+<!--[if IE 7]>    <html class="ie7 oldie"> <![endif]-->
+<!--[if IE 8]>    <html class="ie8 oldie"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="">
+<!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Inner Peace App</title>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
+<link href="css/boilerplate.css" rel="stylesheet" type="text/css">
+<link href="css/innerstyle.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="css/style.mobile.css" />
+<link rel="stylesheet" href="css/style.css">
+<script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="http://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+<script src="js/jquery.js"></script>
+<script src="js/jquery.mobile.js"></script>
+
+<!--[if lt IE 9]>
+<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<script src="js/respond.min.js"></script>
+</head>
+<body style="background-color: rgb(134,106,162);">
+<div class="mainContainer clearfix">
+  <div id="contenidos">
+  	<div class="inner-wrapper" data-role="page">
+        <!-- panel 01 -->
+        <div class="panel left" data-role="panel" data-position="left" data-display="push" id="panel-01">
+        	<div style="height:70px; width:17em; line-height:70px"><img src="imgs/logo.png" height="60" style="margin-left: 60px;"></div>
+            <ul>
+                <li style="background-color:rgb(178,168,152)"><a href="main.html" title="Inicio">Inicio</a></li>
+                <li><a href="Horarios.html" title="Horarios">Horarios</a></li>
+                <li style="background-color:rgb(178,168,152)"><a href="main-geo.html" title="Localización">Localizacion</a></li>
+                <li><a href="main-reservacion.html" title="Reservación">Reservacion</a></li>
+                <li style="background-color:rgb(178,168,152)"><a href="main-consejo.html" title="Consejo de Salud">Consejo de Salud</a></li>
+                <li><a href="Redes.html" title="Redes Sociales">Redes Sociales</a></li>
+            </ul>
+        </div>
+		<div class="header" data-role="header">
+			<span class="open left"><a href="#panel-01"><img src="imgs/icon menu.png" height="40"></a></span>
+            <span class="title"><img src="imgs/logo.png" height="65px" margin-bottom="5px"></span>
+			<span  class="open right"><a href="#" id="salir"  ><img src="imgs/icon exit.png" height="40"></a></span>         
+		</div>
+        <div class="content" data-role="content">
+          
+            <div id="ifrm" class="iframes" style="width: 100%;height: 100%;position: relative;background-color: rgb(134,106,162);" >
+         <iframe class="iframeElement" scroolling="no" src="http://innerpeace.sv/Moviles/main/" style="width: 100%;height: 100%;position: relative;border: none;" ></iframe>
+        </div>
+
+        </div>  
+        
+    	<!-- panel 02 -->
+    	
+	</div>
+  </div>
+</div>      
+<script type="text/javascript">
+    $(document).ready(function exitApp() {
+        $('#salir').click(function(){
+        navigator.app.exitApp();
+        });
+    });
+ </script>
+        
+</body>
+</html>

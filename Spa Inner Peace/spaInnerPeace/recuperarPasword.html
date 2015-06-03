@@ -1,0 +1,138 @@
+﻿<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link href='http://fonts.googleapis.com/css?family=Titillium+Web' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+         <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css"/>
+        <script  src="http://code.jquery.com/jquery-1.10.2.js"></script>
+        <script  src="http://code.jquery.com/ui/1.11.1/jquery-ui.js"></script> 
+       <script type="text/javascript">
+           function ir() { window.location = "login.html" }
+           function validar() {
+               if (mensaje() == 1) {
+               $.ajax({
+                   url: 'http://innerpeace.sv/innerAcces.php',
+                   type: 'post',
+                   data: "email="+document.getElementById('email').value+"&accion=recuperacion",
+                   success: function (output) {
+                       var resultado = output;
+                       resultado.toString();
+                       if (resultado.indexOf("success") > -1) {
+                           navigator.notification.alert("Revise su bandeja de entrada", "", "Notificación");
+                           loader.style.display = "block";
+                           setTimeout('ir()', 2000);
+                       } else {
+                           navigator.notification.alert("Usuario no encontrado", "", "Notificación");                     
+                       }
+                   }, error: function () {
+                       navigator.notification.alert("Sin conexion", "", "Notificación");
+                    
+                   }
+               });
+           }
+     }
+         
+        </script>
+        <script>
+            function mensaje() {
+         if (email.value == "") {
+                   navigator.notification.alert("Ingrese su correo", "", "Notificación"); 
+         } else {
+             if (navigator.network.connection.type == Connection.NONE) {
+                 navigator.notification.alert('Revise su conección a internet', '', 'Atención');
+
+             } else {
+                 return 1;
+             }
+         }
+       }
+        </script>
+        
+
+
+
+        <title></title>
+        <style>
+            .app{
+            position: relative;
+            margin-top: 20%;
+            }
+            .app img {
+            width: 30%;
+            min-width: 130px;
+            }
+            .app {
+            color:#fff;
+            }
+            .loader {
+                position: fixed;
+                width: 100%;
+                height: 100%;
+               background-color: #33035E;
+                bottom: 0px;
+                opacity: 0.8;
+                display:none;
+            }
+                .loader img {
+                    width: 39%;
+                    max-width: 200px;
+                    margin-top: 20%;
+                }
+                 .textos1 {
+                font-size: 1.5em;
+                margin: 5px;
+                color: #fff;}
+                 #stVolver {
+                margin-right: 10%;
+                margin-top: 5%;
+                font-size: 1.6em;
+            }
+        </style>
+    </head>
+    <body class="cuerpo" style="font-family:'Titillium Web';">
+        <div style="text-align:center;">  
+            <div class="app">
+                <img  src="img/Logonuevo.png" />
+                <p class="textos1">Body·Mind·Spirit</p>
+            </div>
+            <p class="textos1" style="color:#fff;font-size:2em;">Olvidaste tu contraseña</p>
+            <div class="cont-forms">
+                <p class="textos1" style="color:#000;">Por favor, ingresa tu direccion de correo electronico</p>
+                <input class="campos" type="text" value="" id="email" />
+                <p class="textos1" style="color:#000;">Enviaremos un correo con tus datos de cuenta a tu direccion de correo electronico</p>
+                <input class="boton" type="button" value="Enviar" onClick="validar()" />
+            </div>
+            <a href="login.html"><p class="textos1" id="stVolver" style="float: right;" >← Volver</p></a>
+        </div>
+        <div id="loader" class="loader">
+            <img src="img/image_760978.gif" />
+        </div>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript">
+            app.initialize();
+        </script>
+    </body>
+</html>
